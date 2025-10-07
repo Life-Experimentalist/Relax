@@ -346,9 +346,6 @@ requires-dist = [
     { name = "werkzeug", specifier = ">=3.0.1" },
 ]
 
-[package.metadata.requires-dev]
-dev = []
-
 [[package]]
 name = "requests"
 version = "2.32.5"

@@ -262,13 +262,13 @@
     <footer class="bg-light py-4 mt-5">
       <div class="container text-center">
         <p class="text-muted mb-2">
-          Made with <i class="bi bi-heart-fill text-danger"></i> by
-          <a
-            href="https://vkrishna04.me"
-            target="_blank"
-            rel="noopener noreferrer"
-            >VKrishna04</a
-          >
+          {% if show_vk %}
+            Made with <i class="bi bi-heart-fill text-danger"></i> by
+            <a href="https://vkrishna04.me" target="_blank" rel="noopener noreferrer">VKrishna04</a>
+          {% else %}
+            Made with <i class="bi bi-heart-fill text-danger"></i> by
+            <a href="https://vkrishna04.me" target="_blank" rel="noopener noreferrer">Srujana</a>
+          {% endif %}
         </p>
         <p class="text-muted small mb-0">
           <a

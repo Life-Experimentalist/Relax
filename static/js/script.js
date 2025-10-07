@@ -82,21 +82,28 @@ $(document).ready(function () {
       method: "GET",
       timeout: 10000,
       success: function (data) {
+        // Build badge only if source is giphy
+        const badgeHtml =
+          data.source === "giphy"
+            ? '<div class="giphy-badge">Powered by <img src="/static/images/giphy-powered.svg" alt="GIPHY"/></div>'
+            : "";
+
         $reliefSection
           .html(
             `
-                    <div class="card shadow-sm relief-card">
-                        <div class="image-container">
-                            <img src="${data.url}" alt="Calming GIF" loading="lazy" onload="adjustImageSize(this)">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">
-                                <i class="bi bi-image"></i> Take a Moment to Breathe
-                            </h5>
-                            <p class="card-text text-muted">Watch this peaceful visual and let your worries fade away.</p>
-                        </div>
-                    </div>
-                `
+          <div class="card shadow-sm relief-card">
+            <div class="image-container">
+              <img src="${data.url}" alt="Calming GIF" loading="lazy" onload="adjustImageSize(this)">
+              ${badgeHtml}
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">
+                <i class="bi bi-image"></i> Take a Moment to Breathe
+              </h5>
+              <p class="card-text text-muted">Watch this peaceful visual and let your worries fade away.</p>
+            </div>
+          </div>
+        `
           )
           .hide()
           .fadeIn(400);
@@ -132,6 +139,11 @@ $(document).ready(function () {
       method: "GET",
       timeout: 10000,
       success: function (data) {
+        const badgeHtml =
+          data.source === "giphy"
+            ? '<div class="giphy-badge">Powered by <img src="/static/images/giphy-powered.svg" alt="GIPHY"/></div>'
+            : "";
+
         $reliefSection
           .html(
             `
@@ -140,6 +152,7 @@ $(document).ready(function () {
                             <img src="${
                               data.url
                             }" alt="Wholesome Meme" loading="lazy" onload="adjustImageSize(this)">
+                            ${badgeHtml}
                         </div>
                         <div class="card-body text-center">
                             <h5 class="card-title">
@@ -187,6 +200,11 @@ $(document).ready(function () {
       method: "GET",
       timeout: 10000,
       success: function (data) {
+        const badgeHtml =
+          data.source === "giphy"
+            ? '<div class="giphy-badge">Powered by <img src="/static/images/giphy-powered.svg" alt="GIPHY"/></div>'
+            : "";
+
         $reliefSection
           .html(
             `
@@ -194,6 +212,7 @@ $(document).ready(function () {
                         <img src="${
                           data.url
                         }" class="card-img-top" alt="Wholesome Meme" loading="lazy">
+                        <div class="image-container">${badgeHtml}</div>
                         <div class="card-body text-center">
                             <h5 class="card-title">
                                 <i class="bi bi-emoji-laughing"></i> ${

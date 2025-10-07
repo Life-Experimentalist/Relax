@@ -5,7 +5,7 @@ A Flask web application that helps users relax with quotes, GIFs, and breathing 
 
 import os
 import random
-from datetime import datetime
+from datetime import date, datetime
 
 import requests
 from dotenv import load_dotenv
@@ -55,7 +55,15 @@ FALLBACK_GIFS = [
 @app.route("/")
 def index():
     """Main page"""
-    return render_template("index.html")
+    # Determine whether to show VKrishna04 in the footer (after 2025-12-01)
+    try:
+        now = datetime.now().date()
+        cutoff = date(year=2025, month=12, day=1)
+        show_vk = now > cutoff
+    except Exception:
+        show_vk = False
+
+    return render_template("index.html", show_vk=show_vk)
 
 
 @app.route("/api/quote")
