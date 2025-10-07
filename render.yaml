@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: relax-stress-buster
+    runtime: python
+    buildCommand: "pip install uv && uv sync"
+    startCommand: "uv run gunicorn app:app"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: GIPHY_API_KEY
+        sync: false
+      - key: FLASK_ENV
+        value: production

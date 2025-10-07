@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://relax-stress-buster.onrender.com/sitemap.xml

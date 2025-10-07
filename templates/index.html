@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO Meta Tags -->
+    <title>Relax - Stress Buster App | Find Your Peace</title>
+    <meta
+      name="description"
+      content="Take a break and relax with inspirational quotes, calming GIFs, wholesome memes, and guided breathing exercises. Your personal stress relief companion."
+    />
+    <meta
+      name="keywords"
+      content="stress relief, relaxation, meditation, breathing exercises, calming quotes, mental health, wellness"
+    />
+    <meta name="author" content="VKrishna04" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://relax-stress-buster.onrender.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://relax-stress-buster.onrender.com/"
+    />
+    <meta
+      property="og:title"
+      content="Relax - Stress Buster App | Find Your Peace"
+    />
+    <meta
+      property="og:description"
+      content="Take a break and relax with inspirational quotes, calming GIFs, wholesome memes, and guided breathing exercises."
+    />
+    <meta
+      property="og:image"
+      content="https://relax-stress-buster.onrender.com/static/images/og-image.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://relax-stress-buster.onrender.com/"
+    />
+    <meta
+      property="twitter:title"
+      content="Relax - Stress Buster App | Find Your Peace"
+    />
+    <meta
+      property="twitter:description"
+      content="Take a break and relax with inspirational quotes, calming GIFs, wholesome memes, and guided breathing exercises."
+    />
+    <meta
+      property="twitter:image"
+      content="https://relax-stress-buster.onrender.com/static/images/og-image.png"
+    />
+
+    <!-- Theme Color for mobile browsers -->
+    <meta
+      name="theme-color"
+      content="#6366f1"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#4f46e5"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Relax - Stress Buster App",
+        "description": "A web application for stress relief through quotes, GIFs, memes, and breathing exercises",
+        "url": "https://relax-stress-buster.onrender.com/",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='images/favicon.png') }}"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <i class="bi bi-emoji-smile"></i> Relax
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <button
+                id="theme-toggle"
+                class="btn btn-link nav-link"
+                aria-label="Toggle dark mode"
+              >
+                <i class="bi bi-moon-stars"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+      <!-- Header Section -->
+      <header class="text-center mb-5">
+        <h1 class="display-4 mb-3">Welcome to Your Peace Zone</h1>
+        <p class="lead text-muted">
+          Take a deep breath. You deserve a moment of calm.
+        </p>
+      </header>
+
+      <!-- Daily Quote Section -->
+      <section id="quote-section" class="mb-5">
+        <div class="card shadow-sm">
+          <div class="card-body text-center p-4">
+            <i class="bi bi-quote text-primary fs-1"></i>
+            <blockquote class="blockquote mb-0 mt-3">
+              <p id="quote-text" class="fs-5">
+                Loading your daily inspiration...
+              </p>
+              <footer id="quote-author" class="blockquote-footer mt-2">
+                <cite title="Source">Loading...</cite>
+              </footer>
+            </blockquote>
+            <button
+              id="refresh-quote"
+              class="btn btn-outline-primary btn-sm mt-3"
+            >
+              <i class="bi bi-arrow-clockwise"></i> New Quote
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stress Relief Button -->
+      <section id="action-section" class="text-center mb-5">
+        <h2 class="h4 mb-4">Feeling Stressed?</h2>
+        <button id="im-stressed" class="btn btn-primary btn-lg px-5 py-3">
+          <i class="bi bi-heart-pulse"></i> I Need Relief
+        </button>
+        <p class="text-muted mt-3 small">
+          Click for a calming GIF, wholesome meme, or breathing exercise
+        </p>
+      </section>
+
+      <!-- Relief Content Area -->
+      <section id="relief-section" class="mb-5">
+        <!-- Dynamic content loaded here -->
+      </section>
+
+      <!-- Breathing Timer (Hidden by default) -->
+      <section id="breathing-timer" class="d-none">
+        <div class="card shadow-sm">
+          <div class="card-body text-center p-5">
+            <h3 class="mb-4">Breathing Exercise</h3>
+            <div id="breathing-circle" class="breathing-circle mx-auto mb-4">
+              <div class="circle-inner">
+                <span id="breathing-instruction" class="breathing-text"
+                  >Breathe In</span
+                >
+              </div>
+            </div>
+            <p id="breathing-count" class="text-muted">Cycle 1 of 3</p>
+            <button id="stop-breathing" class="btn btn-outline-secondary">
+              <i class="bi bi-x-circle"></i> Stop Exercise
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="mt-5 pt-5">
+        <div class="card shadow-sm">
+          <div class="card-body p-4">
+            <h2 class="h4 mb-3">
+              <i class="bi bi-info-circle"></i> About This App
+            </h2>
+            <p>Relax is your personal stress relief companion. We provide:</p>
+            <ul>
+              <li>
+                <strong>Inspirational Quotes:</strong> Daily wisdom to uplift
+                your spirits
+              </li>
+              <li>
+                <strong>Calming GIFs:</strong> Visual relaxation from peaceful
+                scenes
+              </li>
+              <li>
+                <strong>Wholesome Memes:</strong> Light-hearted content to make
+                you smile
+              </li>
+              <li>
+                <strong>Breathing Exercises:</strong> Guided meditation to calm
+                your mind
+              </li>
+            </ul>
+            <p class="mb-0 text-muted small">
+              <i class="bi bi-shield-check"></i> All content is sourced from
+              free public APIs. No data is collected or stored.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4 mt-5">
+      <div class="container text-center">
+        <p class="text-muted mb-2">
+          Made with <i class="bi bi-heart-fill text-danger"></i> by
+          <a
+            href="https://vkrishna04.me"
+            target="_blank"
+            rel="noopener noreferrer"
+            >VKrishna04</a
+          >
+        </p>
+        <p class="text-muted small mb-0">
+          <a
+            href="https://github.com/Life-Experimentalists/Relax"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-github"></i> View on GitHub
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

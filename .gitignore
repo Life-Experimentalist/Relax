@@ -1,0 +1,75 @@
+# Node
+node_modules/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Environment files
+.env
+
+# Local keys/config
+*.local.js
+
+# Project-specific
+specify
+specs/
+.github/prompts/*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.envrc
+
+# Build / packaging
+build/
+dist/
+.eggs/
+*.egg-info/
+.eggs
+pip-wheel-metadata/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Logs
+*.log
+logs/
+
+# OS files
+Thumbs.db
+ehthumbs.db
+
+# Editors
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Static analysis
+pylint-report.txt
+pylint-global.txt
+
+# Other
+coverage/
+htmlcov/
+
+# Keep the original explicit excludes (if any)
+.venv
