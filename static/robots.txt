@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://relax-stress-buster.onrender.com/sitemap.xml
+Sitemap: https://relax-stress-bust.onrender.com/sitemap.xml

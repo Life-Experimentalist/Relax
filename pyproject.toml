@@ -1,12 +1,12 @@
 [project]
-name = "relax-stress-buster"
+name = "relax-stress-bust"
 version = "1.0.0"
 description = "A stress relief web app with quotes, GIFs, memes, and breathing exercises"
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "Apache-2.0" }
 authors = [
-    { name = "VKrishna04", email = "relax-stress-buster@vkrishna04.com", url = "https://vkrishna04.me" }
+    { name = "VKrishna04", email = "relax-stress-bust@vkrishna04.com", url = "https://vkrishna04.me" }
 ]
 keywords = ["stress-relief", "meditation", "wellness", "flask", "web-app"]
 classifiers = [
@@ -37,9 +37,8 @@ Issues = "https://github.com/Life-Experimentalists/Relax/issues"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
-
-[tool.uv]
-dev-dependencies = []
-
 [tool.hatch.build.targets.wheel]
 packages = ["."]
+
+[project.dependency-groups.dev]
+dependencies = []

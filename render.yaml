@@ -1,8 +1,8 @@
 services:
   - type: web
-    name: relax-stress-buster
+    name: relax-stress-bust
     runtime: python
-    buildCommand: "pip install uv && uv sync"
+    buildCommand: "python -m pip install --upgrade pip && pip install uv && uv sync"
     startCommand: "uv run gunicorn app:app"
     envVars:
       - key: PYTHON_VERSION

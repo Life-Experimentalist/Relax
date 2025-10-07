@@ -326,7 +326,7 @@ wheels = [
 ]
 
 [[package]]
-name = "relax-stress-buster"
+name = "relax-stress-bust"
 version = "1.0.0"
 source = { editable = "." }
 dependencies = [

@@ -127,7 +127,7 @@ Relax/
    - Select the `Relax` repository
 
 3. **Configure the service**
-   - Name: `relax-stress-buster` (or your choice)
+   - Name: `relax-stress-bust` (or your choice)
    - Environment: `Python 3`
    - Build Command: `pip install uv && uv sync`
    - Start Command: `uv run gunicorn app:app`
